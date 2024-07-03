@@ -14,7 +14,7 @@ const Skills = () => {
     console.log(skills)
 
     return (
-        <div className="container mx-auto h-screen">
+        <div className="h-screen">
             <div className="flex items-center mb-16">
                 <h1 className="text-3xl">Personal Skills </h1>
                 <hr />

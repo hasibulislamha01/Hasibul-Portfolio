@@ -11,7 +11,7 @@ const WelcomeSection = () => {
 
     return (
         <div
-            className="h-screen flex flex-col items-center justify-center text-center lg:space-y-12 container mx-auto lg:px-28 border border-blue-500"
+            className="h-screen flex flex-col items-center justify-center text-center lg:space-y-12 lg:px-28 border border-blue-500"
         >
             <h1 className="text-3xl font-semibold">Welcome to my Portfolio</h1>
             <div className="text-lg leading-9">

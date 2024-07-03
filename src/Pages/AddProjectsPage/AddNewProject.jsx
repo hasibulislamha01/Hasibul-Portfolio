@@ -1,3 +1,4 @@
+import axios from "axios";
 
 const AddNewProject = () => {
 
@@ -20,6 +21,10 @@ const AddNewProject = () => {
             serverSide
         }
         console.log(projectInfo)
+
+        axios.post('http://localhost:5000/projects', projectInfo)
+        .then(res=> console.log(res))
+        .catch(err => console.error(err.message))
     }
 
     return (
@@ -35,6 +40,7 @@ const AddNewProject = () => {
                     type="text"
                     placeholder="Type here"
                     className="input input-bordered w-full max-w-xs"
+                    required
                 />
             </label>
 
@@ -46,6 +52,7 @@ const AddNewProject = () => {
                     className="textarea textarea-bordered h-24"
                     placeholder="Bio"
                     name="about"
+                    required
                 >
                 </textarea>
             </label>
@@ -59,6 +66,7 @@ const AddNewProject = () => {
                     type="text"
                     placeholder="Type here"
                     className="input input-bordered w-full max-w-xs"
+                    required
                 />
             </label>
 
@@ -71,6 +79,7 @@ const AddNewProject = () => {
                     type="text"
                     placeholder="Type here"
                     className="input input-bordered w-full max-w-xs"
+                    required
                 />
             </label>
 
@@ -83,6 +92,7 @@ const AddNewProject = () => {
                     type="text"
                     placeholder="Type here"
                     className="input input-bordered w-full max-w-xs"
+                    required
                 />
             </label>
 
@@ -95,6 +105,7 @@ const AddNewProject = () => {
                     type="text"
                     placeholder="Type here"
                     className="input input-bordered w-full max-w-xs"
+                    required
                 />
             </label>
 

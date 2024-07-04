@@ -9,6 +9,7 @@ const Banner = () => {
                     <h3 className="text-xl md:text-3xl">A passionate
                     </h3>
                     <h1 className="text-5xl font-bold uppercase hidden md:inline-block text-[#2f4f4f]">Web Developer</h1>
+                    
                 </div>
 
                 <div className='space-y-12'>

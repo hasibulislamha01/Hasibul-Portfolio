@@ -3,6 +3,7 @@ import Education from "./Education";
 import MyProject from "./MyProject";
 import Skills from "./Skills";
 import WelcomeSection from "./WelcomeSection";
+import WorkTogether from "./WorkTogether";
 
 const Home = () => {
     return (
@@ -13,6 +14,8 @@ const Home = () => {
                 <Skills></Skills>
                 <MyProject></MyProject>
                 <Education></Education>
+                <WorkTogether></WorkTogether>
+                {/* <Contact></Contact> */}
             </div>
         </div>
     );

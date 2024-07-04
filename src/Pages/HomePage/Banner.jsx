@@ -2,7 +2,7 @@ import './home.css'
 
 const Banner = () => {
     return (
-        <div className='p-16 lg:p-32 bg-[#e1e2db] h-screen border border-red-400'>
+        <div className='p-16 lg:p-32 bg-[#e1e2db] min-h-screen border border-red-400'>
             <div className="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-12 md:space-y-0">
                 <div className="space-y-2 md:space-y-4 text-[#333333]">
                     <h3 className="text-xl md:text-3xl font-semibold">I am Hasibul</h3>

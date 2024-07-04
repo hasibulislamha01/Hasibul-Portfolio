@@ -4,7 +4,7 @@ import envelopAnimation from '../../assets/envelop.json'
 const Contact = () => {
     return (
         <div className="my-12">
-            <div className="flex items-center justify-evenly">
+            <div className="flex flex-col lg:flex-row items-center justify-evenly">
                 <div className="space-y-4">
 
                     <h1 className="text-3xl text-left mb-6">Reach Me</h1>

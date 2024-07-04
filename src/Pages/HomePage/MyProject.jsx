@@ -18,7 +18,7 @@ const MyProject = () => {
     console.log(projects)
 
     return (
-        <div className="h-screen">
+        <div className="lg:h-screen">
             <h1 className="text-3xl mb-10">My Projects</h1>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                 {

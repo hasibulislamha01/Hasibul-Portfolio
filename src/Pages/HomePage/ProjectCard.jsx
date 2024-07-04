@@ -19,7 +19,7 @@ const ProjectCard = ({ project }) => {
                 <div className='text-left'>
                     <h1 className='text-lg font-medium'>{project?.projectName}</h1>
                     <p>{project?.about}</p>
-                    <div className='mt-4 flex items-center gap-4'>
+                    <div className='mt-4 flex lg:flex-row items-center gap-2 lg:gap-4'>
                         <a
                             href={project?.liveLink}
                             target='_blank'

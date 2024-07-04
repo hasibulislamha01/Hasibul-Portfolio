@@ -4,7 +4,7 @@ import { Timeline } from 'antd';
 
 const Education = () => {
     return (
-        <div className='h-screen flex flex-col justify-center'>
+        <div className='lg:h-screen flex flex-col justify-center'>
             <div className=''>
                 <h1 className="text-3xl mb-12">My Educational Journey</h1>
                 <div className=''>

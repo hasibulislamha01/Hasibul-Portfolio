@@ -24,7 +24,7 @@ const DownloadResume = () => {
         <button
             onClick={handleDownload}
             id="downloadResume"
-            className="bg-[#2f4f4f] hover:bg-[#333333] text-white font-medium py-2 px-4 rounded flex items-center gap-3">
+            className="bg-[#2f4f4f] hover:bg-[#333333] text-white font-medium py-2 px-4 rounded flex items-center gap-3 mt-6">
             <span>Download Resume</span> <GoDownload />
         </button>
     );

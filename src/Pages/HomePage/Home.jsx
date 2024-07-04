@@ -1,4 +1,4 @@
-import Banner from "./Banner";
+import UpdatedBanner from "../../Components/UpdatedBanner";
 import Education from "./Education";
 import EmailingSystem from "./EmailingSystem";
 import MyProject from "./MyProject";
@@ -9,7 +9,8 @@ import WorkTogether from "./WorkTogether";
 const Home = () => {
     return (
         <div className="space-y-12 lg:space-y-32">
-            <Banner></Banner>
+            {/* <Banner></Banner> */}
+            <UpdatedBanner></UpdatedBanner>
             <div className="container mx-auto space-y-12 lg:space-y-32">
                 <WelcomeSection></WelcomeSection>
                 <Skills></Skills>

@@ -2,7 +2,7 @@ import { Card } from 'antd';
 import { HiOutlineSignal } from "react-icons/hi2";
 import { ImEmbed2 } from 'react-icons/im';
 import { IoServerOutline } from 'react-icons/io5';
-
+import PropTypes from 'prop-types'
 
 const ProjectCard = ({ project }) => {
     return (
@@ -22,6 +22,7 @@ const ProjectCard = ({ project }) => {
                     <div className='mt-4 flex items-center gap-4'>
                         <a
                             href={project?.liveLink}
+                            target='_blank'
                             className='text-sky-600 font-medium flex items-center gap-1'
                         >
                             <HiOutlineSignal />
@@ -30,6 +31,7 @@ const ProjectCard = ({ project }) => {
 
                         <a
                             href={project?.clientSide}
+                            target='_blank'
                             className='text-violet-600 font-medium flex items-center gap-1'
                         >
                             <ImEmbed2 />
@@ -38,6 +40,7 @@ const ProjectCard = ({ project }) => {
 
                         <a
                             href={project?.serverSide}
+                            target='_blank'
                             className='text-green-600 font-medium flex items-center gap-1'
                         >
                             <IoServerOutline />
@@ -51,5 +54,9 @@ const ProjectCard = ({ project }) => {
         </Card>
     );
 };
+
+ProjectCard.propTypes = {
+    project: PropTypes.object
+}
 
 export default ProjectCard;

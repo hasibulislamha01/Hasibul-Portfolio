@@ -1,5 +1,6 @@
 import Banner from "./Banner";
 import Education from "./Education";
+import EmailingSystem from "./EmailingSystem";
 import MyProject from "./MyProject";
 import Skills from "./Skills";
 import WelcomeSection from "./WelcomeSection";
@@ -15,7 +16,7 @@ const Home = () => {
                 <MyProject></MyProject>
                 <Education></Education>
                 <WorkTogether></WorkTogether>
-                {/* <Contact></Contact> */}
+                <EmailingSystem></EmailingSystem>
             </div>
         </div>
     );

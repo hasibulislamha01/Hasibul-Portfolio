@@ -8,6 +8,7 @@ import {
 import Root from './Layout/Root';
 import Home from './Pages/HomePage/Home';
 import AddNewProject from './Pages/AddProjectsPage/AddNewProject';
+import Blogs from './Pages/BlogsPage/Blogs';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>
+      },
+      {
+        path: "/blogs",
+        element: <Blogs></Blogs>
       },
       {
         path: "/addProject",

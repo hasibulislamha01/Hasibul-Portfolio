@@ -10,7 +10,7 @@ const MyProject = () => {
     const [projects, setProjects] = useState([])
 
     useEffect(()=> {
-        axios('http://localhost:5000/projects')
+        axios('https://hasibul-porfolio-server.vercel.app/projects')
         .then(res=> setProjects(res?.data))
         .catch(error => console.error(error.message))
     }, [])

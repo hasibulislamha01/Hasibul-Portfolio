@@ -22,7 +22,7 @@ const AddNewProject = () => {
         }
         console.log(projectInfo)
 
-        axios.post('http://localhost:5000/projects', projectInfo)
+        axios.post('https://hasibul-porfolio-server.vercel.app/projects', projectInfo)
         .then(res=> console.log(res))
         .catch(err => console.error(err.message))
     }

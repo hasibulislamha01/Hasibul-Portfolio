@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.profileImage {
+    background: linear-gradient(to right, #d3d3d3, #a9a9a9);
+}
+
+.themeButton {
+    color: #e1e2db;
+    background-color: #2f4f4f;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    transition: 1000ms;
+    border-radius: 5px;
+}
+
+.themeButton:hover {
+    letter-spacing: 0.4rem;
+    transition: 1000ms;
+    background-color: #7da9a9;
+    color: #1f201e;
+}

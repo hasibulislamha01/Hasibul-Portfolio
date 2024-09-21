@@ -15,12 +15,12 @@ const MyProject = () => {
         .catch(error => console.error(error.message))
     }, [])
 
-    console.log(projects)
+    // console.log(projects)
 
     return (
-        <div className="lg:h-screen">
-            <h1 className="text-3xl mb-10">My Projects</h1>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div className="min-h-screen">
+            <h1 className="text-2xl font-bold mb-10 text-center">My Projects</h1>
+            <div className="grid grid-cols-1">
                 {
                     projects?.map(project => 
                         <ProjectCard 

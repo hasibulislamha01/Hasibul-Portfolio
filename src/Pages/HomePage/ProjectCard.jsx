@@ -1,57 +1,32 @@
-import { Card } from 'antd';
-import { HiOutlineSignal } from "react-icons/hi2";
-import { ImEmbed2 } from 'react-icons/im';
-import { IoServerOutline } from 'react-icons/io5';
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom';
 
 const ProjectCard = ({ project }) => {
+    console.log(project);
     return (
-        <Card
-            style={{
-                height: 200
-            }}
-        >
+        <div className='flex items-center justify-between'>
 
-            <div className='flex justify-evenly items-center gap-8'>
-                <div>
-                    <img className='w-[250px] h-[150px] object-cover' src={project?.image} alt="" />
-                </div>
-                <div className='text-left'>
-                    <h1 className='text-lg font-medium'>{project?.projectName}</h1>
-                    <p>{project?.about}</p>
-                    <div className='mt-4 flex lg:flex-row items-center gap-2 lg:gap-4'>
-                        <a
-                            href={project?.liveLink}
-                            target='_blank'
-                            className='text-sky-600 font-medium flex items-center gap-1'
-                        >
-                            <HiOutlineSignal />
-                            <span>Live Site</span>
-                        </a>
+            <div className='space-y-6'>
+                <h1 className='text-7xl leading-none font-extrabold text-transparent text-outline'>{project?.projectName}</h1>
+                <p className='text-lg font-semibold w-3/4'>
+                    {project?.about}
+                </p>
 
-                        <a
-                            href={project?.clientSide}
-                            target='_blank'
-                            className='text-violet-600 font-medium flex items-center gap-1'
-                        >
-                            <ImEmbed2 />
-                            <span>Client Site</span>
-                        </a>
-
-                        <a
-                            href={project?.serverSide}
-                            target='_blank'
-                            className='text-green-600 font-medium flex items-center gap-1'
-                        >
-                            <IoServerOutline />
-                            <span>Server Site</span>
-                        </a>
-                        
-                      
-                    </div>
-                </div>
+                <Link to={project?.liveLink}>
+                    <button className='btn bg-accent hover:rounded-full hover:bg-primary hover:text-accent'>
+                        Live Site
+                    </button>
+                </Link>
             </div>
-        </Card>
+
+            <div>
+                <img
+                    src={project?.image}
+                    alt={`image of ${project?.projectName}`}
+                    className='w-[300px]'
+                />
+            </div>
+        </div>
     );
 };
 

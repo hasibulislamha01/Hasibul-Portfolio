@@ -1,8 +1,9 @@
+import Skills from "../../Components/Skills/Skills";
 import UpdatedBanner from "../../Components/UpdatedBanner";
 import Ai from "./Ai";
 import EmailingSystem from "./EmailingSystem";
 import MyProject from "./MyProject";
-import Skills from "./Skills";
+// import Skills from "./Skills";
 import WelcomeSection from "./WelcomeSection";
 import WorkTogether from "./WorkTogether";
 
@@ -14,7 +15,8 @@ const Home = () => {
             <div className="container mx-auto space-y-12 lg:space-y-32">
                 <WelcomeSection></WelcomeSection>
                 <Ai/>
-                <Skills></Skills>
+                {/* <Skills></Skills> */}
+                <Skills/>
                 <MyProject></MyProject>
                 {/* <Education></Education> */}
                 <WorkTogether></WorkTogether>

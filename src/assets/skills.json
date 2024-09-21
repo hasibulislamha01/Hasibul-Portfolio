@@ -1,0 +1,42 @@
+[
+    {
+      "name": "HTML",
+      "icon": "https://i.ibb.co/Y0q6hvw/html-5.png"
+    },
+    {
+      "name": "CSS",
+      "icon": "https://i.ibb.co/9hQCfSq/css-3.png"
+    },
+    {
+      "name": "Tailwind CSS",
+      "icon": "https://ibb.co.com/37gBpQm"
+    },
+    {
+      "name": "JavaScript",
+      "icon": "https://i.ibb.co/k9MctX6/icons8-js-480.png"
+    },
+    {
+      "name": "React",
+      "icon": "https://ibb.co.com/0tyFKNQ"
+    },
+    {
+      "name": "Firebase",
+      "icon": "https://i.ibb.co/x6gDJsr/icons8-google-firebase-console-480.png"
+    },
+    {
+      "name": "Node.js",
+      "icon": "https://i.ibb.co/r2LN0Lj/programing.png"
+    },
+    {
+      "name": "MongoDB",
+      "icon": "https://ibb.co.com/nD5Dwdh"
+    },
+    {
+      "name": "Express.js",
+      "icon": "https://i.ibb.co/y4CfcL0/icons8-express-js-480.png"
+    },
+    {
+      "name": "Git",
+      "icon": "https://i.ibb.co.com/wM1cgF9/git.webp"
+    }
+  ]

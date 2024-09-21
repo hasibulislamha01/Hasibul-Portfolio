@@ -32,8 +32,8 @@ const Navbar = () => {
 
     return (
         // navbar container
-        <div className={`w-full h-[50px] z-50 fixed ${isSticky ? 'bg-sky-50' : 'bg-transparent'}`}>
-            <div className="h-full container mx-auto  border border-red-300">
+        <div className={`w-full h-[50px] z-50 fixed bg-primary`}>
+            <div className="h-full container mx-auto">
 
                 {/* nav title ----- My name visible in smaller devices*/}
                 <div className="hidden">
@@ -41,11 +41,11 @@ const Navbar = () => {
                 </div>
 
                 {/* horizontal navbar --- (visible in larger screens) */}
-                <div className="hidden md:flex h-full px-2 md:px-4 items-center gap-6  border border-blue-500">
+                <div className="hidden md:flex h-full px-2 md:px-4 items-center gap-6 font-semibold">
 
                     <NavLink
                         to='/'
-                        className='mr-auto font-bold'
+                        className={`mr-auto font-bold text-xl ${isSticky ? 'text-accent' : 'text-secondary'}`}
                     >
                         Hasibul Islam
                     </NavLink>
@@ -55,7 +55,7 @@ const Navbar = () => {
                             <NavLink
                                 key={route.link}
                                 to={route.link}
-                                className={`font-semibold`}
+                                className={({isActive})=> isActive ? 'text-accent' : 'text-secondary'}
                             >
                                 {route.title}
                             </NavLink>

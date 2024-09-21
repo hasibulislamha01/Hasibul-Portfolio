@@ -8,11 +8,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#2F4F4F',
-        secondary: '#E1E2DB',
-        accent: '#FFC857',
-        neutral: '#3D5A80',
-        background: '#293241',
+        primary: '#2F4F4F',  //deep olive green
+        secondary: '#E1E2DB',  // lite greenish gray
+        accent: '#FFC857',   // ripe yellow
+        neutral: '#3D5A80',   // dark blue
+        background: '#293241',  // dark slate
       },
     },
   },

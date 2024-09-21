@@ -1,4 +1,5 @@
 import UpdatedBanner from "../../Components/UpdatedBanner";
+import Ai from "./Ai";
 import Education from "./Education";
 import EmailingSystem from "./EmailingSystem";
 import MyProject from "./MyProject";
@@ -13,6 +14,7 @@ const Home = () => {
             <UpdatedBanner></UpdatedBanner>
             <div className="container mx-auto space-y-12 lg:space-y-32">
                 <WelcomeSection></WelcomeSection>
+                <Ai/>
                 <Skills></Skills>
                 <MyProject></MyProject>
                 <Education></Education>

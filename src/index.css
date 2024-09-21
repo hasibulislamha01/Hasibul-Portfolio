@@ -18,6 +18,6 @@
 .themeButton:hover {
     letter-spacing: 0.4rem;
     transition: 1000ms;
-    background-color: #7da9a9;
-    color: #1f201e;
+    /* background-color: #7da9a9; */
+    /* color: #1f201e; */
 }

@@ -2,6 +2,9 @@ import axios from "axios";
 
 const AddNewProject = () => {
 
+    const serverLink = import.meta.env.VITE_SERVER_LINK
+    console.log(serverLink)
+
     const handleAddProject = (event) => {
         event.preventDefault()
         const form = event.target
@@ -22,7 +25,7 @@ const AddNewProject = () => {
         }
         console.log(projectInfo)
 
-        axios.post('https://hasibul-porfolio-server.vercel.app/projects', projectInfo)
+        axios.post(`${serverLink}/projects`, projectInfo)
         .then(res=> console.log(res))
         .catch(err => console.error(err.message))
     }

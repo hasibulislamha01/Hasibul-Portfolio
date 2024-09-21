@@ -1,28 +1,66 @@
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 
 
 const Navbar = () => {
 
+    const [isSticky, setIsSticky] = useState(false)
 
-    const navItems =
-        <>
-            <NavLink to='/' end className={({ isActive }) => isActive ? 'text-black border-b-2 border-black' : 'text-gray-500 border-gray-500'}>Home</NavLink>
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsSticky(window.scrollY > 0);
+        };
 
-            <NavLink to='/blogs' end className={({ isActive }) => isActive ? 'text-black border-b-2 border-black' : 'text-gray-500 border-gray-500'}>Blogs</NavLink>
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+
+    }, [])
+
+    const routesCollection = [
+        {
+            title: 'Home',
+            link: '/'
+        },
+        {
+            title: 'Blogs',
+            link: '/blogs'
+        },
+    ]
 
 
-        </>
+
     return (
-        <div className="w-full h-[50px] fixed z-50 flex items-center justify-center">
-            <div className="navbar container mx-auto min-w-12  flex justify-center">
+        // navbar container
+        <div className={`w-full h-[50px] z-50 fixed ${isSticky ? 'bg-sky-50' : 'bg-transparent'}`}>
+            <div className="h-full container mx-auto  border border-red-300">
 
-                <div className="navbar-start">
+                {/* nav title ----- My name visible in smaller devices*/}
+                <div className="hidden">
                     <a className="font-semibold text-xl">Hasibul Islam</a>
                 </div>
 
-                <div className="navbar-end items-center gap-4 hidden lg:inline-flex font-medium">
-                    {navItems}
+                {/* horizontal navbar --- (visible in larger screens) */}
+                <div className="hidden md:flex h-full px-2 md:px-4 items-center gap-6  border border-blue-500">
+
+                    <NavLink
+                        to='/'
+                        className='mr-auto font-bold'
+                    >
+                        Hasibul Islam
+                    </NavLink>
+
+                    {
+                        routesCollection.map(route =>
+                            <NavLink
+                                key={route.link}
+                                to={route.link}
+                                className={`font-semibold`}
+                            >
+                                {route.title}
+                            </NavLink>
+                        )
+                    }
 
                 </div>
             </div>

@@ -1,6 +1,5 @@
 import UpdatedBanner from "../../Components/UpdatedBanner";
 import Ai from "./Ai";
-import Education from "./Education";
 import EmailingSystem from "./EmailingSystem";
 import MyProject from "./MyProject";
 import Skills from "./Skills";
@@ -17,7 +16,7 @@ const Home = () => {
                 <Ai/>
                 <Skills></Skills>
                 <MyProject></MyProject>
-                <Education></Education>
+                {/* <Education></Education> */}
                 <WorkTogether></WorkTogether>
                 <EmailingSystem></EmailingSystem>
             </div>

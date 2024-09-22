@@ -4,11 +4,19 @@
         "type": "Full-Stack",
         "about": "This projects offers a collaborative study platform for tutors and students with admin controlling the collaboration among them.",
         "clientSide": "https://github.com/hasibulislamha01/Class-Mate",
-        "image": "https://plus.unsplash.com/premium_vector-1682303957464-d63a66ce1fdb?q=80&w=1242&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "image": "https://i.ibb.co.com/QvpbxK5/clasamate.png",
         "liveLink": "https://classmate-ac788.web.app/",
         "serverSide": "https://github.com/hasibulislamha01/ClassMate-Server",
-        "_id": "6685b13772a366b50a7d418b",
-        "skills": ["React.js", "JavaScript", "Express.js", "MongoDB", "HTML", "CSS", "Firebase", "Stripe"]
-        
-    }
+        "skills": [
+            "React.js",
+            "JavaScript",
+            "Express.js",
+            "MongoDB",
+            "HTML",
+            "CSS",
+            "Firebase",
+            "Stripe"
+        ],
+        "rating": 9
+    }  
 ]

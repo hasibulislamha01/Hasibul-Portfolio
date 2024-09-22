@@ -10,6 +10,7 @@ import Home from './Pages/HomePage/Home';
 import AddNewProject from './Pages/AddProjectsPage/AddNewProject';
 import Blogs from './Pages/BlogsPage/Blogs';
 import AddBlog from './Pages/AddBlogs/AddBlog';
+import Projects from './Pages/ProjectsPage/Projects';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>
+      },
+      {
+        path: "/projects",
+        element: <Projects/>
       },
       {
         path: "/blogs",

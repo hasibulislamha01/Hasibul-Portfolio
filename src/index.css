@@ -4,11 +4,11 @@
 
 
 .text-outline {
-    -webkit-text-stroke: 2px #2F4F4F;
+    -webkit-text-stroke: 2px #FFC857;
 }
 
 .text-outline:hover {
-    -webkit-text-stroke: 3px #2F4F4F;
+    -webkit-text-stroke: 3px #FFC857;
 }
 
 

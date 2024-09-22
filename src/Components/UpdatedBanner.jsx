@@ -53,9 +53,14 @@ const UpdatedBanner = () => {
 
                 </motion.div>
 
-                <div className='space-y-12'>
-                    <img className="profileImage w-[200px] h-[200px] lg:w-[350px] lg:h-[350px] rounded-full" src="https://i.ibb.co/F060y4D/FB-IMG-1703931495032-2-1-removebg-preview.png" alt="" />
-                </div>
+                <motion.div className='space-y-12'>
+                    <motion.img
+                        
+                        className="profileImage w-[200px] h-[200px] lg:w-[350px] lg:h-[350px] rounded-full"
+                        src="https://i.ibb.co/F060y4D/FB-IMG-1703931495032-2-1-removebg-preview.png"
+                        alt="Hasibul Islam image"
+                    />
+                </motion.div>
 
                 <motion.div
                     className={`space-y-1 absolute  

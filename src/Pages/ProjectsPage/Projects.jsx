@@ -1,14 +1,19 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import MyProjectsCard from "./MyProjectsCard";
+import WideCardSkeleton from "../../Components/Skeletons/WideCardSkeleton";
 
 const Projects = () => {
 
     const [projects, setProjects] = useState([])
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         axios('https://hasibul-porfolio-server.vercel.app/projects')
-            .then(res => setProjects(res?.data))
+            .then(res => {
+                setProjects(res?.data)
+                setLoading(false)
+            })
             .catch(error => console.error(error.message))
     }, [])
 
@@ -20,12 +25,19 @@ const Projects = () => {
 
                 <div className="grid grid-cols-1">
                     {
-                        projects?.map(project =>
-                            <MyProjectsCard
-                                key={project?._id}
-                                project={project}
-                            ></MyProjectsCard>
-                        )
+                        loading ?
+                            <div className="mt-12 flex flex-col gap-12">
+                                <WideCardSkeleton />
+                                <WideCardSkeleton />
+                                <WideCardSkeleton />
+                            </div>
+                            :
+                            projects?.map(project =>
+                                <MyProjectsCard
+                                    key={project?._id}
+                                    project={project}
+                                ></MyProjectsCard>
+                            )
                     }
                 </div>
 

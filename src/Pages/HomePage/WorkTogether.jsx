@@ -7,7 +7,7 @@ const WorkTogether = () => {
         <div className="text-center lg:h-screen ">
             <div className="flex flex-col justify-center">
                 <h1 className="text-3xl mb-12">{heading}</h1>
-                <div className="w-full md:w-4/5 mx-auto">
+                <div className="w-full md:w-4/5 mx-auto text-pretty">
 
                     {paragraph}
 

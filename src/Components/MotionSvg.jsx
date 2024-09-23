@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 const MotionSvg = () => {
     return (
         <motion.svg
-            className='border border-accent top-0 right-0 w-[300px] h-[300px]'
+            className='absolute top-[-23%] right-[-23%] w-[220px] h-[220px]'
             fill='transparent'
             viewBox='0 0 506 506'
             xmlns='http://www.w3.org/2000/svg'
@@ -11,7 +11,7 @@ const MotionSvg = () => {
             <motion.circle
                 cx={253}
                 cy={253}
-                r={250}
+                r={200}
                 stroke="#2F4F4F"
                 strokeWidth="4"
                 strokeLinecap='round'

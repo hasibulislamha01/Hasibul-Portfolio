@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import useAxiosSecure from '../../CustomHooks/useAxiosSecure';
 import SkillCard from './SkillCard'
-import RoundSkeleton from '../Skeletons/RoundSkeleton';
-import skillsData from '../../assets/skills.json'
+import RoundSkeleton from '../../Skeletons/RoundSkeleton';
+import skillsData from '../../../assets/skills.json'
+import useAxiosSecure from '../../../CustomHooks/useAxiosSecure';
 
 const Skills = () => {
 

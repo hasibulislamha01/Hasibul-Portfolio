@@ -1,20 +1,25 @@
 import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { useFieldArray, useForm } from "react-hook-form";
 import BlogTypeDropDown from "./BlogTypeDropDown";
-import axios from "axios";
 import Swal from "sweetalert2";
+import useAxiosSecure from "../../CustomHooks/useAxiosSecure";
 
 const AddBlog = () => {
 
-    const serverLink = import.meta.env.VITE_SERVER_LINK
+    const axiosSecure = useAxiosSecure()
     const [blogType, setBlogType] = useState("Theory")
     // console.log(blogType)
 
-    const { register, handleSubmit, formState: { errors }, } = useForm()
+    const { register, control, handleSubmit, formState: { errors }, } = useForm()
 
+
+    // Use useFieldArray for handling dynamic fields
+    const { fields, append, remove } = useFieldArray({
+        control,
+        name: 'fields',
+    });
 
     const handleBlogType = (type) => {
-        console.log('selected type is ', type)
         setBlogType(type)
     }
 
@@ -23,10 +28,10 @@ const AddBlog = () => {
         const blogInfo = { ...data, blogType }
         console.log(blogInfo)
 
-        axios.post(`${serverLink}/blogs`, blogInfo)
+        axiosSecure.post(`/blogs`, blogInfo)
             .then(res => {
-                console.log(res.data)
-                if (res.data.insertedId) {
+                console.log(res?.data)
+                if (res?.data?.insertedId) {
                     Swal.fire({
                         title: "Success!",
                         text: "You created the Blog!",
@@ -40,13 +45,13 @@ const AddBlog = () => {
                     });
                 }
             }).catch(error => {
-                console.error(error.message)
+                console.error(error?.message)
             })
     }
 
     return (
         <>
-            <div className="pt-12 text-center font-medium">
+            <div className="py-20 text-center font-medium">
                 <h1 className="text-3xl">Create a Blog</h1>
                 <p>Life is short</p>
             </div>
@@ -69,7 +74,7 @@ const AddBlog = () => {
                             {errors.title && <p className="text-red-400 font-medium">title is required.</p>}
                         </label>
 
-                        {/* image */}
+                        {/* cover image */}
                         <label className="form-control w-full max-w-xs">
                             <div className="label">
                                 <span className="label-text font-medium">A relevent cover image</span>
@@ -104,6 +109,48 @@ const AddBlog = () => {
                 </div>
 
 
+                {/* Render dynamically added fields */}
+                {fields.map((item, index) => (
+                    <div key={item.id} className="mt-4 flex items-center gap-4">
+                        {/* Description Input Field */}
+                        <textarea
+                            type="text"
+                            placeholder="Description"
+                            {...register(`fields.${index}.description`, { required: false })}
+                            className="border p-2 rounded w-full"
+                        />
+
+                        {/* Image Input Field */}
+                        <input
+                            type="text"
+                            {...register(`fields.${index}.image`, { required: false })}
+                            className="border p-2 rounded"
+                        />
+
+                        {/* Remove Button */}
+                        <button
+                            type="button"
+                            onClick={() => remove(index)}
+                            className="text-red-500"
+                        >
+                            Remove
+                        </button>
+                    </div>
+                ))}
+
+                {/* Button to add new fields */}
+                <button
+                    type="button"
+                    onClick={() =>
+                        append({ description: '', image: '' }) // Add new set of fields
+                    }
+                    className="bg-blue-500 text-white px-4 py-2 rounded my-4"
+                >
+                    Add Field
+                </button>
+
+            
+
 
                 <div className="flex justify-center mt-12">
 
@@ -111,6 +158,8 @@ const AddBlog = () => {
 
                 </div>
             </form>
+
+        
         </>
     );
 };

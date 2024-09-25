@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import empty from '../../assets/empty.jpg'
 import useAxiosPublic from "../../CustomHooks/useAxiosPublic";
+import BlogCard from "./BlogCard";
 
 const Blogs = () => {
 
@@ -16,7 +17,7 @@ const Blogs = () => {
     console.log(blogs);
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen">
+        <div className="py-20 flex flex-col items-center justify-center min-h-screen">
 
             {
                 blogs?.length === 0 ?
@@ -29,12 +30,16 @@ const Blogs = () => {
                         <h1 className="text-red-400 text-center font-semibold text-2xl">No Blogs posted yet </h1>
                     </div>
                     :
-                    <div>
-                        blogs are here {blogs?.length}
+                    <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 place-items-center justify-items-stretch">
+                        {
+                            blogs?.map(blog =>
+                                <BlogCard key={blog?._id} blog={blog} />
+                            )
+                        }
                     </div>
             }
 
-            
+
 
 
         </div>

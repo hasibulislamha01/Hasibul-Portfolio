@@ -17,7 +17,7 @@ const Blogs = () => {
     console.log(blogs);
 
     return (
-        <div className="py-20 flex flex-col items-center justify-center min-h-screen">
+        <div className="pb-12 lg:pb-32  bg-background pt-20 flex flex-col items-center justify-center min-h-screen">
 
             {
                 blogs?.length === 0 ?
@@ -30,7 +30,7 @@ const Blogs = () => {
                         <h1 className="text-red-400 text-center font-semibold text-2xl">No Blogs posted yet </h1>
                     </div>
                     :
-                    <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 place-items-center justify-items-stretch">
+                    <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 place-items-center justify-items-stretch gap-4 lg:gap-6">
                         {
                             blogs?.map(blog =>
                                 <BlogCard key={blog?._id} blog={blog} />

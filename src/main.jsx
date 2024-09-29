@@ -11,6 +11,10 @@ import AddNewProject from './Pages/AddProjectsPage/AddNewProject';
 import Blogs from './Pages/BlogsPage/Blogs';
 import AddBlog from './Pages/AddBlogs/AddBlog';
 import Projects from './Pages/ProjectsPage/Projects';
+import BlogDetails from './Pages/BlogsPage/BlogDetails';
+
+const serverURL = import.meta.env.VITE_SERVER_LINK;
+// console.log(serverURL);
 
 const router = createBrowserRouter([
   {
@@ -28,6 +32,15 @@ const router = createBrowserRouter([
       {
         path: "/blogs",
         element: <Blogs></Blogs>
+      },
+      {
+        path: "/blog-details/:id",
+        loader: async ({params}) => {
+          const response = await fetch(`${serverURL}/blog-details/${params.id}`);
+          const data = await response.json()
+          return data
+        } ,
+        element: <BlogDetails/>
       },
       {
         path: "/addProject",

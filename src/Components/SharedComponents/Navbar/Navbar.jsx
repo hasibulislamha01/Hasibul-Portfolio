@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-
+import menuIcon from '../../../../public/menuIcon.svg'
 
 
 const Navbar = () => {
@@ -59,13 +59,14 @@ const Navbar = () => {
                             <NavLink
                                 key={route.link}
                                 to={route.link}
-                                className={({isActive})=> isActive ? 'text-accent' : 'text-secondary'}
+                                className={({ isActive }) => isActive ? 'text-accent' : 'text-secondary'}
                             >
                                 {route.title}
                             </NavLink>
                         )
                     }
 
+                    <img src={menuIcon} alt="" />
                 </div>
             </div>
         </div>
